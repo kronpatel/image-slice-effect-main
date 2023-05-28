@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252839;
+}
+h2
+{
+    position: relative;
+    left: 60%;
+    top: 25%;
+    font-size: 2vw;
+    color: #252839;
+    -webkit-text-stroke: 0.2vw #383d52;
+    text-transform: uppercase;
+}
+h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: auto;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #1139da;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,100%
+    {
+        width: 100%;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #151515;
+}
+.img {
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+.half {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+    transition: 200ms ease-in-out transform;
+}
+.half-2 {
+    right: 0;
+}
+.half-2 img {
+    position: absolute;
+    right: 0;
+}
+.img:hover .half-1 {
+    transform: skew(20deg) translate(-20%, -5%);
+}
+.img:hover .half-2 {
+    transform: skew(20deg) translate(20%, 5%);
+}
+
+.container {
+    display: flex;
+    column-gap: 10rem;
+}
